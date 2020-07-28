@@ -17,7 +17,8 @@ SOURCES += \
         main.cpp \
     billboardgeometry.cpp
 
-RESOURCES += qml.qrc \
+RESOURCES += \
+    image.qrc \
     shaders.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model

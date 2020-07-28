@@ -40,9 +40,6 @@
 #include "billboardgeometry.h"
 #include "billboardmaterial.h"
 
-#include "testmaterial.h"
-
-#include <QOpenGLContext>
 
 Qt3DExtras::QFirstPersonCameraController * cameraController;
 
@@ -119,7 +116,13 @@ int main(int argc, char* argv[])
 {
     QGuiApplication app(argc, argv);
 
+    QSurfaceFormat format;
+    format.setMajorVersion(3);
+    format.setMinorVersion(2);
+    QSurfaceFormat::setDefaultFormat(format);
+
     Qt3DExtras::Qt3DWindow view;
+    //view.setsu
     view.resize(windowWidth, windowHeight);
     Qt3DExtras::QForwardRenderer *renderer = (Qt3DExtras::QForwardRenderer *)view.activeFrameGraph();
     renderer->setClearColor("black");
